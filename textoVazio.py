@@ -9,11 +9,11 @@ while True:
 print("Nome: ", nome)
 
 while True:
-    senha = input("Digite sua senha: (min. 6 caractéres):")
+    senha = input("Digite sua senha: (max. 6 caractéres):")
 
     if len(senha) <= 6:
         break
     else:
-        print("A senha deve ter 6 caractéres no mínimo. ")
+        print("A senha deve ter 6 caractéres no máximo. ")
 
 print(" Conta Registrada!: ", senha)
