@@ -5,10 +5,29 @@ print('*****Jogo adivinhação*****')
 print('**************************')
 
 numero_secreto = random.randrange(1,101)
-total_tentativas = 5
+total_tentativas = 10
 rodada = 1
+dificuldade = (1, 2, 3)
 
-for rodade in range(1, total_tentativas + 1):
+print("Qual dificuldade você gostaria de jogar? ")
+print("(1) Fácil (2) Médio (3) Difícil ")
+
+dificuldade = int(input("Defina a dificuldade: "))
+
+if(dificuldade == 1):
+    total_tentativas
+if(dificuldade == 2):
+    total_tentativas = 5
+elif(dificuldade == 3):
+    total_tentativas = 3
+
+    print("Suas tentativas: ", total_tentativas)
+#facil = total_tentativas  
+#medio = total_tentativas -5
+#dificil = total_tentativas -7
+
+    
+for rodada in range(1, total_tentativas + 1):
     print("Tentativa {} de {}". format(rodada, total_tentativas))
 
     chute_str = input("Digite o seu numero: ")
