@@ -4,19 +4,21 @@ print('**************************')
 print('*****Jogo adivinhação*****')
 print('**************************')
 
-numero_secreto = random.randint(1,100)
+numero_secreto = random.randrange(1,101)
 total_tentativas = 5
 rodada = 1
 
 while(rodada <= total_tentativas):
 
-
-
     chute_str = input("Digite o seu numero: ")
 
-    print("Seu numero é: ", chute_str)
-
     chute = int(chute_str)
+
+    if(chute < 1 or chute > 100):
+        print("O número deve ser entre 1 e 100")
+        continue
+
+    print("Seu chute foi: ", chute_str)
 
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
