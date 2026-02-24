@@ -19,7 +19,6 @@ for rodade in range(1, total_tentativas + 1):
         print("O número deve ser entre 1 e 100")
         continue
 
-    print("Seu chute foi: ", chute_str)
 
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
@@ -27,14 +26,14 @@ for rodade in range(1, total_tentativas + 1):
 
 
     if(acertou):
-        print("Você Acertou!! ")
+        print("É isso meno você é foda! ")
         break
     else:
         if(maior):
-            print("O seu chute foi maior que o número secreto")
+            print("Diminuii")
         elif(menor):
-            print("O seu chute foi menor que o número secreto")
-    
+            print("Aumenta o bagulho")
+    rodada = rodada + 1
 
 print(numero_secreto)
-print("Fim de jogo otáro")
+print("Boa meno tenta de novo se tu é bem home")
