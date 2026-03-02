@@ -1,27 +1,33 @@
 import random
 
-print('**************************')
-print('*****Jogo adivinhação*****')
-print('**************************')
+#Cores no Terminal PY
+VERMELHO = "\033[31m"
+VERDE = "\033[32m"
+AMARELO = "\033[33m"
+AZUL = "\033[34m"
+RESET = "\033[0m"
 
-numero_secreto = random.randrange(1,101)
-total_tentativas = 10
-rodada = 1
-dificuldade = (1, 2, 3)
 
-print("Qual dificuldade você gostaria de jogar? ")
-print("(1) Fácil (2) Médio (3) Difícil ")
+while True:
+    try:
+        dificuldade = int(input("Defina a dificuldade (1-3): "))
+        
+        if dificuldade == 1:
+            total_tentativas = 10
+            break 
+        elif dificuldade == 2:
+            total_tentativas = 5
+            break 
+        elif dificuldade == 3:
+            total_tentativas = 3
+            break 
+        else:
+            print(f"{AMARELO}Opção inválida! Digite 1, 2 ou 3.{RESET}")
+    except ValueError:
+        print(f"{VERMELHO}Por favor, digite um número inteiro.{RESET}")
 
-dificuldade = int(input("Defina a dificuldade: "))
 
-if(dificuldade == 1):
-    total_tentativas
-if(dificuldade == 2):
-    total_tentativas = 5
-elif(dificuldade == 3):
-    total_tentativas = 3
-
-    print("Suas tentativas: ", total_tentativas)
+print(f"Você terá {total_tentativas} tentativas.")
 #facil = total_tentativas  
 #medio = total_tentativas -5
 #dificil = total_tentativas -7
