@@ -8,9 +8,19 @@ AZUL = "\033[34m"
 RESET = "\033[0m"
 
 
+print(f"{AZUL}**************************{RESET}")
+print(f"{AZUL}*****Jogo adivinhação*****{RESET}")
+print(f"{AZUL}**************************{RESET}")
+
+numero_secreto = random.randrange(1, 101)
+total_tentativas = 0
+
+print("Qual dificuldade você gostaria de jogar? ")
+print("(1) Fácil (2) Médio (3) Difícil ")
+
 while True:
     try:
-        dificuldade = int(input("Defina a dificuldade (1-3): "))
+        dificuldade = int(input("Defina a dificuldade (1-2-3): "))
         
         if dificuldade == 1:
             total_tentativas = 10
@@ -26,8 +36,10 @@ while True:
     except ValueError:
         print(f"{VERMELHO}Por favor, digite um número inteiro.{RESET}")
 
-
 print(f"Você terá {total_tentativas} tentativas.")
+
+
+print("Suas tentativas: ", total_tentativas)
 #facil = total_tentativas  
 #medio = total_tentativas -5
 #dificil = total_tentativas -7
