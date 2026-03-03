@@ -7,11 +7,10 @@ AMARELO = "\033[33m"
 AZUL = "\033[34m"
 RESET = "\033[0m"
 
-
 print(f"{AZUL}**************************{RESET}")
 print(f"{AZUL}*****Jogo adivinhação*****{RESET}")
 print(f"{AZUL}**************************{RESET}")
-
+ 
 numero_secreto = random.randrange(1, 101)
 total_tentativas = 0
 
@@ -67,10 +66,11 @@ for rodada in range(1, total_tentativas + 1):
         break
     else:
         if(maior):
-            print("Diminuii")
+            print(VERMELHO+"Diminuii"+RESET)
         elif(menor):
-            print("Aumenta o bagulho")
+            print(VERDE+"Aumenta o bagulho"+RESET)
     rodada = rodada + 1
 
 print(numero_secreto)
-print("Boa meno tenta de novo se tu é bem home")
+print(AZUL+"Fim de jogo meno"+RESET)
+
