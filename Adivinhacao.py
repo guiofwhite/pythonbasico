@@ -53,9 +53,9 @@ for rodada in range(1, total_tentativas + 1):
     chute = int(chute_str)
 
     if(chute < 1 or chute > 100):
-        print("O número deve ser entre 1 e 100")
+        print(AMARELO +"O número deve ser entre 1 e 100" +RESET)
         continue
-
+    
 
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
@@ -63,7 +63,7 @@ for rodada in range(1, total_tentativas + 1):
 
 
     if(acertou):
-        print("É isso meno você é foda! ")
+        print(VERDE+"É isso meno você é foda! "+RESET)
         break
     else:
         if(maior):
