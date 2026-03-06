@@ -1,6 +1,6 @@
 while True:
     try:
-        nascimento = (intinput("Digite que ano você nasceu: "))
+        nascimento = int(input("Digite que ano você nasceu: "))
 
         if 1900 <= nascimento <= 2026:
             break
